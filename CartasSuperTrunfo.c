@@ -13,7 +13,7 @@ int main() {
     printf("Digite o codigo do estado de A-H: ");
     scanf("%s", &estado);
 
-    printf("Digite o codigo da carta de A1-A4: ");
+    printf("Digite o codigo da carta de A1-A4: "); //digitar 2 digitos
     scanf("  %c %c", &codigo1, &codigo2); //dificuldade em ler 2 caracter, encontrei esse metodo em uma pesquisa 
 
     printf("Digite o Nome da cidade: " );
@@ -48,7 +48,7 @@ int main() {
     printf("Digite o estado da carta 2 de A-H ");
     scanf("%s", &estado2);
 
-    printf("Digite o codigo da carta 2: ");
+    printf("Digite o codigo da carta 2: "); //digitar dois digitos 
     scanf(" %c %c", &codigo3, &coddigo4);
 
     printf("Digite o nome da segunda cidade:  ");
@@ -71,5 +71,6 @@ int main() {
     printf("O pibe da cidade é: %f\n", pib2);
     printf("O numero de pontos turisticos é: %d\n", pontoturistico2);
 
+    return 0;
 
 }
