@@ -5,6 +5,7 @@ int main() {
     char estado = 'a'; // uso de char para armazenar um caractere 
     char codigo1, codigo2, codigo3; // variáveis para códigos de 3 caracteres
     char cidade [25];  // array de caracteres para o nome da cidade
+    float populacao = 600000;
     float area = 7000.000;  // float que aceita casas decimais area km²
     float pib = 456.5671009; // float que aceita casas decimais pib em bilhoes 
     int pontoturistico = 20; // numero inteiro 
@@ -13,6 +14,7 @@ int main() {
     char estado2 = 'b'; // código do estado da carta 2
     char codigo4, codigo5, codigo6; // variáveis para códigos de 3 caracteres
     char cidade2 [24]; // nome da cidade da carta 2
+    float populacao2 = 900000;
     float area2 = 965.080700; // área em km²
     float pib2 = 569.004400; // PIB em bilhões
     int pontoturistico2 = 20; // pontos turísticos
@@ -26,6 +28,9 @@ int main() {
 
     printf("Digite o Nome da cidade: " ); //ao digitar, nao usar nome composto
     scanf("%s", cidade); // leitura de palavra única de até 24 caracteres
+
+    printf("Digite o nmero de habitantes ");
+    scanf("%f", &populacao);
 
     printf("Digite a area da cidade em kM²: "); //digitar a arem em km²
     scanf("%f", &area);
@@ -48,6 +53,9 @@ int main() {
     printf("Digite o nome da segunda cidade:  "); //Usar diferente do primeiro, não usar nome composto
     scanf("%s", cidade2); // leitura de palavra única de até 24 caracteres
 
+    printf("Digite o nmero de habitantes ");
+    scanf("%f", &populacao2);
+
     printf("Digite a area em KM²: ");
     scanf("%f", &area2);
 
@@ -61,6 +69,7 @@ int main() {
     printf("O estado é: %c\n", estado);
     printf("O codigo da carta é: %c%c%C\n", codigo1, codigo2, codigo3);
     printf("O nome da cidade é: %s\n", cidade);
+    printf("O numero de habitantes é: %f\n", populacao);
     printf("A area da cidade é: %f\n", area);
     printf("O pibe da cidade é: %f\n", pib);
     printf("O numero de pontostos turisticos é: %d\n", pontoturistico);
@@ -69,6 +78,7 @@ int main() {
     printf(" O estado é: %c\n", estado2);
     printf("O codigo da carta é: %c%c%c\n", codigo4, codigo5, codigo6);
     printf("O nome da cidade é: %s\n", cidade2);
+    printf("O numero de habitantes é: %f\n", populacao2);
     printf("A area da cidade é: %f\n", area2 );
     printf("O pibe da cidade é: %f\n", pib2);
     printf("O numero de pontos turisticos é: %d\n", pontoturistico2);
