@@ -1,57 +1,57 @@
 #include <stdio.h>
 
 int main() { 
-    //aqui vou declarar as variaveis da primera carta 1
-    char estado;
-    char codigo1, codigo2; //tive dificuldade pesquisei um ponco e foi uma forma mais facil que entendi
-    char cidade [25];  
-    float area = 7000.000; 
-    float pib = 456.0000;
-    int pontoturistico = 20;
+    //variaveis da primera carta 1
+    char estado = 'a'; // uso de char para armazenar um caractere 
+    char codigo1, codigo2, codigo3; // variáveis para códigos de 3 caracteres
+    char cidade [25];  // array de caracteres para o nome da cidade
+    float area = 7000.000;  // float que aceita casas decimais area km²
+    float pib = 456.5671009; // float que aceita casas decimais pib em bilhoes 
+    int pontoturistico = 20; // numero inteiro 
 
     //Agora vou declarar as variaveis da carta 2
-    char estado2;
-    char codigo3, coddigo4;
-    char cidade2 [24];
-    float area2 = 70.000000;
-    float pib2 = 56.000000;
-    int pontoturistico2 = 20;
+    char estado2 = 'b'; // código do estado da carta 2
+    char codigo4, codigo5, codigo6; // variáveis para códigos de 3 caracteres
+    char cidade2 [24]; // nome da cidade da carta 2
+    float area2 = 965.080700; // área em km²
+    float pib2 = 569.004400; // PIB em bilhões
+    int pontoturistico2 = 20; // pontos turísticos
 
     //aqui peço para digitar os dados da carta 1
-    printf("Digite o codigo do estado de A-H: ");
+    printf("Digite o codigo do estado de A-H: "); 
     scanf("%s", &estado);
 
-    printf("Digite o codigo da carta de A1-A4: "); //digitar 2 digitos
-    scanf("  %c %c", &codigo1, &codigo2); //dificuldade em ler 2 caracter, encontrei esse metodo em uma pesquisa 
+    printf("Digite o codigo da carta de A01-A04: "); //digitar 3 digitos
+    scanf("  %c %c %c", &codigo1, &codigo2, &codigo3); // leitura de 3 caracteres
 
-    printf("Digite o Nome da cidade: " );
-    scanf("%s", cidade);
+    printf("Digite o Nome da cidade: " ); //ao digitar, nao usar nome composto
+    scanf("%s", cidade); // leitura de palavra única de até 24 caracteres
 
-    printf("Digite a area da cidade em M²: ");
+    printf("Digite a area da cidade em kM²: "); //digitar a arem em km²
     scanf("%f", &area);
 
-    printf("Digite o pibe: ");
+    printf("Digite o pib: "); //digitar o pib em bilhoes 
     scanf("%f", &pib);
 
-    printf("Digete o numero de pontos turisticos: ");
+    printf("Digite o numero de pontos turisticos: "); //digitar pontos turisticos 
     scanf("%d", &pontoturistico);
 
       
 
-    //peço para digitar os dados da carta 2, para diferenciar as cartas peço que digite valores diferentes da primeira 
-    printf("Digite o estado da carta 2 de A-H ");
+    //peço para digitar os dados da carta 2, p
+    printf("Digite o estado da carta 2 de A-H "); //Peço que digite valores diferentes da primeira 
     scanf("%s", &estado2);
 
-    printf("Digite o codigo da carta 2: "); //digitar dois digitos 
-    scanf(" %c %c", &codigo3, &coddigo4);
+    printf("Digite o codigo da carta 2 de A01- A04: "); //digitar 3 digitos 
+    scanf(" %c %c %c", &codigo4, &codigo5, &codigo6);
 
-    printf("Digite o nome da segunda cidade:  ");
-    scanf("%s", cidade2);
+    printf("Digite o nome da segunda cidade:  "); //Usar diferente do primeiro, não usar nome composto
+    scanf("%s", cidade2); // leitura de palavra única de até 24 caracteres
 
     printf("Digite a area em KM²: ");
     scanf("%f", &area2);
 
-    printf("Digite o pibe: ");
+    printf("Digite o pib: "); //digitar o pib em bilhoes
     scanf("%f", &pib2);
 
     printf("Digite o numero de pontos turisticos: ");
@@ -59,20 +59,20 @@ int main() {
 
     //aqui eu faço print das respostas da carta1 
     printf("O estado é: %c\n", estado);
-    printf("O codigo da carta é: %c%c\n", codigo1, codigo2);
+    printf("O codigo da carta é: %c%c%C\n", codigo1, codigo2, codigo3);
     printf("O nome da cidade é: %s\n", cidade);
     printf("A area da cidade é: %f\n", area);
     printf("O pibe da cidade é: %f\n", pib);
     printf("O numero de pontostos turisticos é: %d\n", pontoturistico);
 
-    //agora o print da segunda carta para melhor diferenciar, coloque valores diferentes ao digitar
+    //agora o print da segunda carta
     printf(" O estado é: %c\n", estado2);
-    printf("O codigo da carta é: %c%c\n", codigo3, coddigo4);
+    printf("O codigo da carta é: %c%c%c\n", codigo4, codigo5, codigo6);
     printf("O nome da cidade é: %s\n", cidade2);
     printf("A area da cidade é: %f\n", area2 );
     printf("O pibe da cidade é: %f\n", pib2);
     printf("O numero de pontos turisticos é: %d\n", pontoturistico2);
 
-    return 0;
+    return 0; //finaliza o programa 
 
 }
