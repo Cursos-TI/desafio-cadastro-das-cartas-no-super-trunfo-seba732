@@ -9,6 +9,8 @@ int main() {
     float area = 7000.000;  // float que aceita casas decimais area km²
     float pib = 456.5671009; // float que aceita casas decimais pib em bilhoes 
     int pontoturistico = 20; // numero inteiro 
+    float densidade; // A densidade é calculada dividindo o número total de habitantes pela área da cidade
+    float pibpercapita; // PIB per Capita é calculada dividindo o número total do PIB / habitantes
 
     //Agora vou declarar as variaveis da carta 2
     char estado2 = 'b'; // código do estado da carta 2
@@ -18,6 +20,9 @@ int main() {
     float area2 = 965.080700; // área em km²
     float pib2 = 569.004400; // PIB em bilhões
     int pontoturistico2 = 20; // pontos turísticos
+    float densidade2; // A densidade é calculada dividindo o número total de habitantes pela área da cidade
+    float pibpercapita2; // PIB per Capita é calculada dividindo o número total do PIB / habitantes
+
 
     //aqui peço para digitar os dados da carta 1
     printf("Digite o codigo do estado de A-H: "); 
@@ -30,7 +35,7 @@ int main() {
     scanf("%s", cidade); // leitura de palavra única de até 24 caracteres
 
     printf("Digite o nmero de habitantes: ");
-    scanf("%d", &populacao); //leitura  da populção
+    scanf("%d", &populacao); //leitura  da população
 
     printf("Digite a area da cidade em kM²: "); //digitar a arem em km²
     scanf("%f", &area); 
@@ -41,8 +46,11 @@ int main() {
     printf("Digite o numero de pontos turisticos: "); //digitar pontos turisticos 
     scanf("%d", &pontoturistico);
 
-      
-    //peço para digitar os dados da carta 2, p
+    densidade = (float) populacao / area; // O cast (float) garante que a divisão seja feita com casas decimais exata
+    pibpercapita = (float) (pib * 1e9) / populacao; // O PIB foi fornecido em bilhões, Essa foi a forma que encontre para converter em reais.
+        
+    
+    //Peço para digitar os dados da carta 2, p
     printf("Digite o estado da carta 2 de A-H "); //Peço que digite valores diferentes da primeira 
     scanf("%s", &estado2);
 
@@ -64,14 +72,21 @@ int main() {
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontoturistico2);
 
+    densidade2 = (float) populacao2 / area2; // O cast (float) garante que a divisão seja feita com casas decimais exata
+    pibpercapita2 =  (float) (pib2 * 1e9) / populacao2; // O PIB foi fornecido em bilhões, Essa foi a forma que encontrei para converter em reais.
+
+
     //aqui eu faço print das respostas da carta1 
     printf("O estado é: %c\n", estado); //exibe a letra do estado 
     printf("O codigo da carta é: %c%c%C\n", codigo1, codigo2, codigo3); //exibe 3 caracteres 
     printf("O nome da cidade é: %s\n", cidade); //exibe o nome da cidade
     printf("O numero de habitantes é: %d\n", populacao); //exibe o numero de habitantes
     printf("A area da cidade é: %f\n", area); // exibe a area da cidade 
-    printf("O pibe da cidade é: %f\n", pib); //exibe o pib da cidade  
+    printf("O PIB da cidade é: %f\n", pib); //exibe o pib da cidade  
     printf("O numero de pontostos turisticos é: %d\n", pontoturistico); // exibe o numero de pontos turisticos
+    printf("A densidade é: %.2f hab/km²\n" , densidade); //exibe o cauculo da densidade 
+    printf("O PIB per capita é: %.2f reais\n" , pibpercapita ); //exibe cauculo do pib per capita
+
 
     //agora o print da segunda carta
     printf(" O estado é: %c\n", estado2); //exibe a letra do estado 2 
@@ -79,8 +94,12 @@ int main() {
     printf("O nome da cidade é: %s\n", cidade2); //exibe o nome da cidade 2
     printf("O numero de habitantes é: %d\n", populacao2); //exibe o numero de habitantes 2
     printf("A area da cidade é: %f\n", area2 ); // exibe a area da cidade 2
-    printf("O pibe da cidade é: %f\n", pib2); //exibe o pib da cidade 2
+    printf("O PIB da cidade é: %f\n", pib2); //exibe o pib da cidade 2
     printf("O numero de pontos turisticos é: %d\n", pontoturistico2);
+    printf("A densidade é: %.2f hab/km²\n" , densidade2 ); //exibe o cauculo da densidade 
+    printf("O PIB per capita é: %.2f reais\n" , pibpercapita2 ); //exibe cauculo do pib per capita
+
+
 
     return 0; //finaliza o programa 
 
